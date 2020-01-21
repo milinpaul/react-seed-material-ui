@@ -1,5 +1,6 @@
 import React from 'react'
 import { ThemeProvider } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
 import { Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
@@ -12,6 +13,7 @@ const history = createBrowserHistory()
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Router history={history}>
         <Layout>
           <Routes />

@@ -11,7 +11,17 @@ This is a Seed Project for starting out an application.
 
 Inside the src Folder
 
-- App
+- src
+  - App
+    - Components -> resides all the presentational/dumb components
+      - Layout -> where Header and Footer resides. Everything pertain to the layout of the app, side bar etc.
+    - Pages -> resides the features/module for the application
+      - Home
+      - About
+    - Routes -> resides the global routes for the application
+    - Theme -> where we define the global theme object for material ui
+    - index.js -> root file for App
+- index.js -> This is start file for the application
 
 ## Available Scripts
 
