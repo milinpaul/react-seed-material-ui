@@ -7,6 +7,7 @@ import { createBrowserHistory } from 'history'
 import theme from './Theme'
 import Layout from './Components/Layout'
 import Routes from './Routes'
+import Loader from './Components/Loader'
 
 const history = createBrowserHistory()
 
@@ -16,7 +17,9 @@ function App() {
       <CssBaseline />
       <Router history={history}>
         <Layout>
-          <Routes />
+          <React.Suspense fallback={<Loader />}>
+            <Routes />
+          </React.Suspense>
         </Layout>
       </Router>
     </ThemeProvider>
