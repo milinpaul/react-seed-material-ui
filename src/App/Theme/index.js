@@ -3,14 +3,14 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 export default createMuiTheme({
   palette: {
+    background: {
+      default: '#fafafa'
+    },
     type: 'light',
     primary: {
       main: '#442B48'
     },
     secondary: green
-  },
-  status: {
-    danger: 'orange'
   },
   typography: {
     fontFamily: [
