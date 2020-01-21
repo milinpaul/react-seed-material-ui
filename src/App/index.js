@@ -1,5 +1,6 @@
 import React from 'react'
-import { ThemeProvider } from '@material-ui/core/styles'
+import { StylesProvider, MuiThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from 'styled-components'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
@@ -13,16 +14,20 @@ const history = createBrowserHistory()
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router history={history}>
-        <Layout>
-          <React.Suspense fallback={<Loader />}>
-            <Routes />
-          </React.Suspense>
-        </Layout>
-      </Router>
-    </ThemeProvider>
+    <StylesProvider injectFirst>
+      <MuiThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Router history={history}>
+            <Layout>
+              <React.Suspense fallback={<Loader />}>
+                <Routes />
+              </React.Suspense>
+            </Layout>
+          </Router>
+        </ThemeProvider>
+      </MuiThemeProvider>
+    </StylesProvider>
   )
 }
 

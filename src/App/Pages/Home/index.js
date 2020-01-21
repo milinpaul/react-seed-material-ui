@@ -1,7 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const PrimaryTitle = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`
 
 const index = () => {
-  return <div style={{ marginTop: '20px', textAlign: 'center' }}>Body goes here</div>
+  return <PrimaryTitle>Body Goes here!</PrimaryTitle>
 }
 
 export default index
