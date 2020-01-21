@@ -19,23 +19,22 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function App() {
+const Header = () => {
   const classes = useStyles()
+
   return (
-    <div className='App'>
-      <AppBar position='static'>
-        <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant='h6' className={classes.title}>
-            React Seed
-          </Typography>
-          <Button color='inherit'>Login</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position='static'>
+      <Toolbar>
+        <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='menu'>
+          <MenuIcon />
+        </IconButton>
+        <Typography variant='h6' className={classes.title}>
+          React Seed
+        </Typography>
+        <Button color='inherit'>Login</Button>
+      </Toolbar>
+    </AppBar>
   )
 }
 
-export default App
+export default Header
